@@ -1,8 +1,40 @@
 {% extends 'base.html' %}
 
 {% block title %}About Me{% endblock title %}
+{% load static %}
 
 
 {% block content %}
-<h1>Hello! this is about me</h1>
+<section class="about-section center-row">
+    <div class="about-image-container center-row">
+        <img src={% static './img/compguy.png' %}>
+    </div>
+    <div class="about-description-container center-column">
+        <h1>Backend Developer</h1>
+        <h2>Andrew Reyna</h2>
+
+        <p>Welcome to my portfolio, here you will find a series of projects that I've you used to develop my skills as a software developer in both the front end and back end side of coding.  In the process of doing so I've come to appreciate the mystery and complexity of backend development and so It has become primary focus.  I appreciate being able to buld robust and scalable web applications.  I want to spend more time working with serverside logic, databases, and API's. I think the challenges around optimizing performance and security are well suited for my interest.
+        <br>
+        my commitment to continuous learning ensures that I stay updated with the latest technologies and best practices in backend development. I am proactive in seeking out opportunities to improve efficiency and streamline processes, making me an asset to any team. 
+        <br>
+        In conclusion, By focusing on backend development, I aim to help your company build robust, scalable, and secure web applications that meet the needs of your users and drive business growth.
+        </p>
+        <div class="label-container center-column">
+            <h2>Skills</h2>
+            <div class="label-list center-row">
+                <label class="label-text">Python</label>
+                <label class="label-text">Javascript</label>
+                <label class="label-text">HTML</label>
+                <label class="label-text">CSS</label>
+                <label class="label-text">Node.js</label>
+                <label class="label-text">REACT</label>
+                <label class="label-text">Django</label>
+                <label class="label-text">FLask</label>
+                <label class="label-text">SQLite</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 {% endblock content %}
