@@ -1,0 +1,80 @@
+/*variable*/
+:root {
+    --primary-color: #AF9FFF;
+    --primary-color-100: #D5CCFF;
+    --primary-color-300: #7F66FF;
+
+    --secondary-color: #0e8453;
+    --secondary-color-600: #04C876;
+    --secondary-color-900: #12e666;
+
+    --neutral-color: #E0E0E0;
+    
+    --background-color: #8e8787;
+
+    --surface-color: #069cce;
+
+    --lobster-font: "Lobster Two", sans-serif;
+    --sans-font: "DM Sans", sans-serif;
+} 
+
+.center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* General style: The style that is going to be applied to
+all the elements*/
+
+html {
+    background-color: var(--background-color);
+    font-size: 14px;
+}
+
+* {
+    font-family: var(--sans-font);
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+/* Text style */
+h1 {
+    color: var(--secondary-color-600);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-family: var(--lobster-font);
+    letter-spacing: 0.6rem;
+    font-size: 1.8rem;
+}
+
+p {
+    color: var(--neutral-color);
+    font: 1.1rem;
+}
+
+.label-text {
+    color: var(--background-color);
+    background-color: var(--primary-color-100);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+#check-option, .nav-btn {
+    display: none;
+}

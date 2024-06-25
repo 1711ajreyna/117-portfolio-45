@@ -17,10 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from pages.views import about, home, contact
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', about, name='about'),
-    path('contact', contact, name='contact'),
+    path('contact/', contact, name='contact'),
     path('content/', include('content.urls')), 
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL)
+
+# www.myportfolio.com/content/
