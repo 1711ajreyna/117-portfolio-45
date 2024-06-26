@@ -7,26 +7,36 @@
 
 <h2>Projects</h2>
 
+
 <section class="projects-section center-column">
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'project_new' %}" class="btn-primary">
+            Add Project
+        </a>
+    {% endif %}
+    
     <h2>Projects</h2>
 
     <div class="projects-list">
         <!--All the cards here-->
         {% for project in projects %}
-        <div class="project-card">
-            <a href="{{ project.repository}}" target="_blank">
-                <img src="{{ project.image.url }}">
-                <p>{{ project.name }}</p>
-                <p>{{ project.description }}</p>
-                <p>{{ project.year }}</p>
 
-                <div class="skills-list center-row">
-                    {% for tech in project.technologies.all %}
-                    <label class="label-text">{{ tech.name }}</label>
-                    {% endfor %}
-                </div>
-            </a>
-        </div>
+            <div class="project-card">
+                <a href="{{ project.repository }}" target="_blank">
+                    <img src="{{ project.image.url }}">
+                    <p>{{ project.name }}</p>
+                    <p>{{ project.description }}</p>
+                    <p>{{ project.year }}</p>
+
+                    <div class="skills-list center-row">
+                            {% for tech in project.technologies.all %}
+                            <label class="label-text">{{ tech.name }}</label>
+                            {% endfor %}
+                        </div>
+                </a>
+            </div>
+
         {% endfor %}
     </div>
     </section>
